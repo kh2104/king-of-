@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.button-container a {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  min-height: 44px;
+  text-align: center;
+}
+
+.button-container a:hover {
+  background-color: #0056b3;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  min-height: 260px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto 15px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.team-member p:not(.sub-description) {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.sub-description {
+  font-size: 15px;
+  color: #0f0e0e;
+  margin-top: 10px;
+}
+
+.behind {
+  font-size: 13px;
+  color: #000;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-member h3 {
+    font-size: 16px;
+  }
+
+  .team-member p {
+    font-size: 13px;
+  }
+
+  .sub-description {
+    font-size: 13px;
+  }
+
+  .behind {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  /* ✅ 모바일 버튼 최적화 */
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .button-container a {
+    width: 60%;             /* 너비 줄이기 */
+    max-width: 200px;       /* 최대 크기 제한 */
+    padding: 8px 12px;      /* 얇게 보이도록 패딩 축소 */
+    font-size: 13px;        /* 살짝 작은 폰트 */
+    border-radius: 5px;     /* 둥근 정도 줄임 */
+    min-height: 36px;       /* 최소 높이도 조금 낮게 */
+  }
+}
